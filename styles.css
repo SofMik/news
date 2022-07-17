@@ -1,0 +1,106 @@
+body {
+    margin: 0;
+    padding: 0;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+}
+
+header {
+    display: flex;
+    align-items: center;/*выравнирание содержимого элемента (заголовка в header) по вертикали - цертру*/
+    justify-content: right; /*выравнирание содержимого элемента (заголовка в header) по горизонтали - левому краю*/
+    height:400px;
+    background: url('https://cdn.pixabay.com/photo/2016/10/20/15/08/digitization-1755783_1280.jpg'); bottom: no-repeat; background-size: cover;
+}
+
+h1 {
+    color: white;
+    font-size: 5em;
+    margin-bottom: 180px; /*работает при align-items: center;*/
+    margin-right: 280px;
+}   
+
+.news {
+    background-color: #D6D6D6;
+    padding: 50px 0 32px;
+
+}
+
+article {
+    width: 850px;
+    margin: 0 auto 32px;
+    padding: 7px 15px;
+    border-bottom: 1px solid #6B6B6B;
+    border: 1px solid #6B6B6B;
+}
+/*цвет фона каждого нечетного элемента*/
+article:nth-child(odd) {
+    background-color: #d9dbe7;
+}
+
+/*цвет фона каждого четного элемента*/
+article:nth-child(even) {
+    background-color: #c5d5f3;
+}
+
+/*слово "New" перед первыми двумя элементами *среди группы соседних элементов*/
+article:nth-child(-n+2)::before {
+    content: "New!";
+    font-style: italic;
+    color: rgb(79, 8, 178);
+    padding: 3px;
+    border: 1.5px solid  rgb(79, 8, 178);
+}
+
+article a {
+    color: #3366CC;
+    text-decoration: none;
+}
+
+article a:hover {/*при наведении*/
+    color: #04318b;
+}
+
+article a:visited {/*после нажати*/
+    color: #7e8298;
+}
+
+article h2 {
+    margin-bottom: 10px;
+}
+
+.article-meta {
+    color: #009999;
+    margin-bottom: 12px;   
+}
+
+article img {
+    width:  100%;
+    height: 300px;
+    object-fit: cover; /*сохраняется соотношение сторон изображения, фото растягивается гармонично*/
+}
+
+footer {
+    padding-top: 50px;
+    padding-bottom: 60px;
+    text-align: center;
+    background-color: #A9A9A9;
+}
+/*все класса links в footer*/
+footer .links { 
+    margin-bottom: 50px;
+    
+}
+/*все cсылки а класса links в footer*/
+footer .links>a { 
+    color: #3D3D3D;
+    padding:  0 25px;
+    font-size: 13px;
+    font-weight: 600;
+    letter-spacing: .1rem;
+    text-decoration: none;
+    text-transform: uppercase;
+}
+
+.copyright {
+    color: aqua;
+}
