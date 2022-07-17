@@ -16,7 +16,7 @@
 ---
 
 ## Cкриншот/Screenshot
-![](photo/photo.png)
+![](photo/photo.jpg)
 
 ---
 
